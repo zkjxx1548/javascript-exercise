@@ -6,7 +6,7 @@ function chooseMultiplesOfThree(collection) {
 function chooseNoRepeatNumber(collection) {
   // TODO 2: 在这里写实现代码
   const result = [collection[0]];
-  collection.array.forEach(element => {
+  collection.forEach(element => {
     if (!result.includes(element)) {
       result.push(element);
     }
