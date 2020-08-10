@@ -1,5 +1,5 @@
-// TODO 13: 在这里写实现代码
 const { default: Person } = require('./person');
+// TODO 13: 在这里写实现代码
 
 class Student extends Person {
   constructor(name, age, klass) {
