@@ -3,7 +3,7 @@ function fetchData(url) {
     const xhr = new XMLHttpRequest();
     // <-- start
     // TODO 22: 通过Promise实现异步请求
-    xhr.open('POST', url);
+    xhr.open('GET', url);
     xhr.setRequestHeader('content-type', 'application/json');
     // eslint-disable-next-line func-names
     xhr.onreadystatechange = function() {
