@@ -1,9 +1,6 @@
 export default function countTypesNumber(source) {
   // TODO 6: 在这里写实现代码
-  const collection = Object.values(source);
-  let sum = 0;
-  collection.forEach(number => {
-    sum += parseInt(number, 10);
+  return Object.values(source).reduce((acc, cur) => {
+    return parseInt(acc, 10) + parseInt(cur, 10);
   });
-  return sum;
 }
