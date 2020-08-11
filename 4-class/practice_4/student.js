@@ -1,4 +1,4 @@
-const { default: Person } = require('./person');
+import Person from './person';
 // TODO 16: 在这里写实现代码
 
 class Student extends Person {
@@ -8,7 +8,7 @@ class Student extends Person {
   }
 
   introduce() {
-    return `${super.basic_introduce()} I am a Student. I am at Class ${this.klass}.`;
+    return `${super.introduce()} I am a Student. I am at Class ${this.klass}.`;
   }
 }
 export default Student;

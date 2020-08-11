@@ -1,4 +1,4 @@
-const { default: Person } = require('./person');
+import Person from './person';
 
 // TODO 11: 在这里写实现代码
 class Student extends Person {
