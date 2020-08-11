@@ -12,6 +12,7 @@ function chooseNoRepeatNumber(collection) {
     }
   });
   return result;
+  // return new Set(collection);
 }
 
 export { chooseMultiplesOfThree, chooseNoRepeatNumber };

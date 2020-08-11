@@ -7,13 +7,7 @@ function fetchData(url) {
       'content-type': 'application/json'
     }
   };
-  fetch(url, options).then(response => {
-    if (response.status >= 200 && response.status <= 299) {
-      Response.success(response);
-    } else {
-      Response.failure(response);
-    }
-  });
+  return fetch(url, options).then(response => response.json());
   // end -->
 }
 

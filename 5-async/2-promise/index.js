@@ -3,15 +3,14 @@ function fetchData(url) {
     const xhr = new XMLHttpRequest();
     // <-- start
     // TODO 22: 通过Promise实现异步请求
-    xhr.open('GET', url);
+    xhr.open('GET', url, true);
     xhr.setRequestHeader('content-type', 'application/json');
-    // eslint-disable-next-line func-names
-    xhr.onreadystatechange = function() {
+    xhr.onreadystatechange = () => {
       if (xhr.readyState === 4 && xhr.status >= 200 && xhr.status <= 299) {
-        resolve(xhr);
+        resolve(xhr.response);
       }
       if (xhr.readyState === 4 && (xhr.status < 200 || xhr.status > 299)) {
-        reject(xhr);
+        reject(xhr.response);
       }
     };
     xhr.send();
@@ -22,6 +21,7 @@ function fetchData(url) {
 const URL = 'http://localhost:3000/api';
 fetchData(URL)
   .then(result => {
+    console.log(result);
     document.writeln(JSON.parse(result).name);
   })
   .catch(error => {

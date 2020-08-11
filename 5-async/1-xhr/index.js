@@ -2,10 +2,9 @@ function fetchData(url, successCallback, errorCallback) {
   const xhr = new XMLHttpRequest();
   // <-- start
   // TODO 21: 通过XMLHttpRequest实现异步请求
-  xhr.open('POST', url);
+  xhr.open('GET', url, true);
   xhr.setRequestHeader('content-type', 'application/json');
-  // eslint-disable-next-line func-names
-  xhr.onreadystatechange = function() {
+  xhr.onreadystatechange = () => {
     if (xhr.readyState === 4 && xhr.status >= 200 && xhr.status <= 299) {
       successCallback(xhr);
     }
