@@ -5,14 +5,7 @@ function chooseMultiplesOfThree(collection) {
 
 function chooseNoRepeatNumber(collection) {
   // TODO 2: 在这里写实现代码
-  const result = [collection[0]];
-  collection.forEach(element => {
-    if (!result.includes(element)) {
-      result.push(element);
-    }
-  });
-  return result;
-  // return new Set(collection);
+  return Array.from(new Set(collection));
 }
 
 export { chooseMultiplesOfThree, chooseNoRepeatNumber };
